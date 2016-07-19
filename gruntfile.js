@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         files: ['builds/development/**/*.html',
           'components/scripts/**/*.js',
           'components/less/**/*.less'],
-        tasks: ['concat', 'less'],
+        tasks: ['less', 'concat'],
         options: {
           spawn: false,
           livereload:true
