@@ -1,0 +1,21 @@
+{
+  "name": "gruntworkflows",
+  "version": "1.0.0",
+  "description": "Workflows with Grunt",
+  "authors": [
+    "Ram Maradolla"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+
+  },
+  "homepage": "https://github.com/rammaradolla/gruntworkflows",
+  "main": ""
+}
