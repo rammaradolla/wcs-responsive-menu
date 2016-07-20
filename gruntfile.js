@@ -45,6 +45,17 @@ module.exports = function(grunt) {
       }
     },
 
+    clean: {
+      dist: {
+        files: [{
+          dot: true,
+          src: [
+            'builds/development/css/*.css'
+          ]
+        }]
+      }
+    },
+
     connect: {
       server: {
         options: {
@@ -61,7 +72,7 @@ module.exports = function(grunt) {
         files: ['builds/development/**/*.html',
           'components/scripts/**/*.js',
           'components/less/**/*.less'],
-        tasks: ['less', 'concat'],
+        tasks: ['clean', 'less', 'concat'],
         options: {
           spawn: false,
           livereload:true
@@ -78,8 +89,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-bower-concat');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
 
-  grunt.registerTask('default', ['wiredep', 'less', 'concat', 'connect', 'watch']);
+  grunt.registerTask('default', ['clean','wiredep', 'less', 'concat', 'connect', 'watch']);
 
 }; //wrapper function
